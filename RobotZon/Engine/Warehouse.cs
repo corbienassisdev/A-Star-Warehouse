@@ -15,5 +15,14 @@ namespace RobotZon.Engine
             Robots = new List<Robot>();
             Items = new List<Item>();
         }
+
+        public void MoveRobot(int id, int dr, int dc)
+        {
+            if (id >= 0 && id < Robots.Count)
+            {
+                Robot r = Robots[id];
+                r.Position += new Position(dr, dc);
+            }
+        }
     }
 }

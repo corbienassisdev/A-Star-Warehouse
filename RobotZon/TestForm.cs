@@ -19,7 +19,7 @@ namespace RobotZon
         {
             Warehouse = new Warehouse(new int[,]
             {
-                { 0, 0, 0, 0, 0, 1 },
+                { 0, 0, 0, 0, 0, 0 },
                 { 0, 0, 0, 0, 0, 0 },
                 { 0, 0, -1, -1, 0, 0 },
                 { 0, 0, -1, -1, 0, 0 },
@@ -27,11 +27,9 @@ namespace RobotZon
                 { 0, 0, 0, 0, 0, 0 }
             });
 
-            Warehouse.Robots.Add(new Robot("Elmer"));
-            Warehouse.Robots.Add(new Robot("Patrick"));
-            Warehouse.Robots.Add(new Robot("Robby"));
+            Warehouse.Robots.Add(new Robot("Robby", new Position(0, 0)));
 
-            Warehouse.Items.Add(new Item("Overpowered toilet cleaner +2 ATK", new Position(2, 3), ItemOrientation.North));
+            Warehouse.Items.Add(new Item("Overpowered toilet cleaner +2 ATK", new Position(2, 2), ItemOrientation.North));
         }
 
         public void Log(object content)
@@ -39,20 +37,24 @@ namespace RobotZon
             listBoxDebug.Items.Add(string.Format("[{0}] {1}\r\n", DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss"), content.ToString()));
         }
 
-        private void TestForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void panelMain_Paint(object sender, PaintEventArgs e)
         {
             int size = 40;
             Graphics g = e.Graphics;
-            for (int i = 0; i < Warehouse.Data.GetLength(0); i++)
+            for (int l = 0; l < Warehouse.Data.GetLength(0); l++)
             {
-                for (int j = 0; j < Warehouse.Data.GetLength(1); j++)
+                for (int c = 0; c < Warehouse.Data.GetLength(1); c++)
                 {
-                    g.DrawRectangle(new Pen(Color.Black), new Rectangle(i * size + size, j * size + size, size, size));
+                    int a = Warehouse.Data[l, c];
+                    switch (a)
+                    {
+                        case -1:
+                            g.FillRectangle(new SolidBrush(Color.Black), new Rectangle(c * size + size, l * size + size, size, size));
+                            break;
+                        default:
+                            g.DrawRectangle(new Pen(Color.Black), new Rectangle(c * size + size, l * size + size, size, size));
+                            break;
+                    }
                 }
             }
         }

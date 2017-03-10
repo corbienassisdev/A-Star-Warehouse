@@ -18,7 +18,7 @@ namespace RobotZon.Salotti
             Parent = null;
             Children = new List<Node>();
         }
-
+        
         public void AddParent(Node parent)
         {
             Parent = parent;

@@ -70,7 +70,6 @@
             this.Controls.Add(this.panelDebug);
             this.Name = "TestForm";
             this.Text = "TestForm";
-            this.Load += new System.EventHandler(this.TestForm_Load);
             this.panelDebug.ResumeLayout(false);
             this.ResumeLayout(false);
 

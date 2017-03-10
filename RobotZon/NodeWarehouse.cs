@@ -1,25 +1,21 @@
-<<<<<<< HEAD
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using RobotZon.Salotti;
+using System.Collections.Generic;
 
 namespace RobotZon
 {
-    class NodeWarehouse : GenericNode
+    public class NodeWarehouse : Node
     {
         public NodeWarehouse(string name) : base(name)
         {
         }
 
-        public override bool IsEqual(GenericNode N2)
+        public override bool IsEqual(Node N2)
         {   
             //todo
             return true;
         }
 
-        public override double GetArcCost(GenericNode N2)
+        public override double GetArcCost(Node N2)
         {
             //todo
             return 0;
@@ -31,7 +27,7 @@ namespace RobotZon
             return true;
         }
 
-        public override List<GenericNode> GetListSucc()
+        public override List<Node> GetListSucc()
         {
             //todo 
             return null;
@@ -43,49 +39,3 @@ namespace RobotZon
         }
     }
 }
-=======
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using RobotZon.Salotti;
-
-namespace RobotZon
-{
-    class NodeWarehouse : GenericNode
-    {
-        public NodeWarehouse(string name) : base(name)
-        {
-        }
-
-        public override bool IsEqual(GenericNode N2)
-        {   
-            //todo
-            return true;
-        }
-
-        public override double GetArcCost(GenericNode N2)
-        {
-            //todo
-            return 0;
-        }
-
-        public override bool EndState()
-        {
-            //todo
-            return true;
-        }
-
-        public override List<GenericNode> GetListSucc()
-        {
-            //todo 
-            return null;
-        }
-
-        public override void CalculeHCost()
-        {
-            //todo
-        }
-    }
-}
->>>>>>> 115bcbcaada5c81497dc76ce831730574fa4ba80

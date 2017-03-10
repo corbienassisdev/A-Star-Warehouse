@@ -51,6 +51,7 @@
     <Compile Include="Engine\ItemOrientation.cs" />
     <Compile Include="Engine\Position.cs" />
     <Compile Include="Engine\Robot.cs" />
+    <Compile Include="NodeWarehouse.cs" />
     <Compile Include="TestForm.cs">
       <SubType>Form</SubType>
     </Compile>

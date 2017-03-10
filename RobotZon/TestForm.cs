@@ -52,7 +52,24 @@ namespace RobotZon
             {
                 for (int j = 0; j < Warehouse.Data.GetLength(1); j++)
                 {
-                    g.DrawRectangle(new Pen(Color.Black), new Rectangle(i * size + size, j * size + size, size, size));
+
+                    //Change le fond de la première colonne en vert
+                    if (i == 1 && j !=0)
+                    {
+                        SolidBrush brush;
+                        brush = new SolidBrush(Color.ForestGreen);
+                        g.FillRectangle(brush, new Rectangle(i * size + size, j * size + size, size, size));
+                        g.DrawRectangle(new Pen(Color.ForestGreen), new Rectangle(i * size + size, j * size + size, size, size));
+
+                    }
+
+                    else
+                    {
+                        g.DrawRectangle(new Pen(Color.Black), new Rectangle(i * size + size, j * size + size, size, size));
+                    }
+
+
+
                 }
             }
         }

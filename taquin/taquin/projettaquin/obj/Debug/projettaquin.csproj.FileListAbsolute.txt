@@ -35,3 +35,6 @@ D:\Utilisateurs\Corentin\Bureau\taquin\taquin\projettaquin\obj\Debug\projettaqui
 D:\Utilisateurs\Corentin\Bureau\taquin\taquin\projettaquin\obj\Debug\projettaquin.Properties.Resources.resources
 D:\Utilisateurs\Corentin\Bureau\taquin\taquin\projettaquin\obj\Debug\projettaquin.csproj.GenerateResource.Cache
 D:\Utilisateurs\Corentin\Bureau\taquin\taquin\projettaquin\obj\Debug\projettaquin.exe
+D:\Utilisateurs\Corentin\Documents\workspace\visual studio\IA - Projet\taquin\taquin\projettaquin\bin\Debug\projettaquin.exe.config
+D:\Utilisateurs\Corentin\Documents\workspace\visual studio\IA - Projet\taquin\taquin\projettaquin\obj\Debug\projettaquin.exe
+D:\Utilisateurs\Corentin\Documents\workspace\visual studio\IA - Projet\taquin\taquin\projettaquin\obj\Debug\projettaquin.pdb

@@ -19,12 +19,12 @@ namespace RobotZon
         {
             Warehouse = new Warehouse(new int[,]
             {
-                { 0, 0, 0, 0, 0, 0 },
-                { 0, 0, 0, 0, 0, 0 },
-                { 0, 0, -1, -1, 0, 0 },
-                { 0, 0, -1, -1, 0, 0 },
-                { 0, 0, 0, 0, 0, 0 },
-                { 0, 0, 0, 0, 0, 0 }
+                { 1, 0, 0, 0, 0, 0 },
+                { 1, 0, 0, 0, 0, 0 },
+                { 1, 0, -1, -1, 0, 0 },
+                { 1, 0, -1, -1, 0, 0 },
+                { 1, 0, 0, 0, 0, 0 },
+                { 1, 0, 0, 0, 0, 0 }
             });
 
             Warehouse.Robots.Add(new Robot("Robby", new Position(0, 0)));
@@ -48,13 +48,19 @@ namespace RobotZon
                     int a = Warehouse.Data[l, c];
                     switch (a)
                     {
-                        case -1:
-                            g.FillRectangle(new SolidBrush(Color.Black), new Rectangle(c * size + size, l * size + size, size, size));
+                        case 1:
+                            g.FillRectangle(new SolidBrush(Color.ForestGreen), new Rectangle(c * size + size, l * size + size, size, size));
                             break;
+
+                        case -1:
+                            g.FillRectangle(new SolidBrush(Color.DeepSkyBlue), new Rectangle(c * size + size, l * size + size, size, size));
+                            break;
+
                         default:
-                            g.DrawRectangle(new Pen(Color.Black), new Rectangle(c * size + size, l * size + size, size, size));
                             break;
                     }
+
+                    g.DrawRectangle(new Pen(Color.Black), new Rectangle(c * size + size, l * size + size, size, size));
                 }
             }
         }

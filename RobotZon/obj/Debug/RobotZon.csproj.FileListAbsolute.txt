@@ -1,1 +1,9 @@
 D:\Utilisateurs\Corentin\Documents\workspace\visual studio\IA - Projet\RobotZon\bin\Debug\RobotZon.exe.config
+H:\S8\IA Génétique\Projet\RobotZon\bin\Debug\RobotZon.exe.config
+H:\S8\IA Génétique\Projet\RobotZon\obj\Debug\RobotZon.csprojResolveAssemblyReference.cache
+H:\S8\IA Génétique\Projet\RobotZon\obj\Debug\RobotZon.Properties.Resources.resources
+H:\S8\IA Génétique\Projet\RobotZon\obj\Debug\RobotZon.csproj.GenerateResource.Cache
+H:\S8\IA Génétique\Projet\RobotZon\bin\Debug\RobotZon.exe
+H:\S8\IA Génétique\Projet\RobotZon\bin\Debug\RobotZon.pdb
+H:\S8\IA Génétique\Projet\RobotZon\obj\Debug\RobotZon.exe
+H:\S8\IA Génétique\Projet\RobotZon\obj\Debug\RobotZon.pdb

@@ -53,6 +53,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Library\Legacy\GenericNode.cs" />
+    <Compile Include="Library\Legacy\Graph.cs" />
+    <Compile Include="Library\Node.cs" />
+    <Compile Include="Library\Graph.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

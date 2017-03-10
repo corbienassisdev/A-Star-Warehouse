@@ -7,7 +7,7 @@ namespace RobotZon.Salotti
         protected string Name;                          //Doit être unique pour chaque Node !
         public double GCost { get; set; }               //Coût du chemin du noeud initial jusqu'à ce noeud
         public double HCost { get; set; }               //Estimation heuristique du coût pour atteindre le noeud final
-        public double TotalCost { get; set; }               //Estimation heuristique du coût pour atteindre le noeud final
+        public double TotalCost { get; set; }           //Estimation heuristique du coût pour atteindre le noeud final
 
         public Node Parent { get; protected set; }
         public List<Node> Children { get; protected set; }

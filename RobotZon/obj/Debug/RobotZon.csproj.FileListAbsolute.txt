@@ -7,3 +7,4 @@ H:\S8\IA Génétique\Projet\RobotZon\bin\Debug\RobotZon.exe
 H:\S8\IA Génétique\Projet\RobotZon\bin\Debug\RobotZon.pdb
 H:\S8\IA Génétique\Projet\RobotZon\obj\Debug\RobotZon.exe
 H:\S8\IA Génétique\Projet\RobotZon\obj\Debug\RobotZon.pdb
+H:\S8\IA Génétique\Projet\RobotZon\obj\Debug\RobotZon.TestForm.resources

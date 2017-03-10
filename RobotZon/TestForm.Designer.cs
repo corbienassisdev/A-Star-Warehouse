@@ -59,7 +59,7 @@
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(734, 562);
             this.panelMain.TabIndex = 1;
-            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
+            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.onDraw);
             // 
             // TestForm
             // 

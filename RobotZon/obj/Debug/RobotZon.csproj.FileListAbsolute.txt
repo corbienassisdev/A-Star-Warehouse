@@ -7,3 +7,5 @@ H:\S8\IA Génétique\Projet\RobotZon\bin\Debug\RobotZon.exe
 H:\S8\IA Génétique\Projet\RobotZon\bin\Debug\RobotZon.pdb
 H:\S8\IA Génétique\Projet\RobotZon\obj\Debug\RobotZon.exe
 H:\S8\IA Génétique\Projet\RobotZon\obj\Debug\RobotZon.pdb
+D:\Utilisateurs\Corentin\Documents\workspace\visual studio\IA - Projet\RobotZon\obj\Debug\RobotZon.exe
+D:\Utilisateurs\Corentin\Documents\workspace\visual studio\IA - Projet\RobotZon\obj\Debug\RobotZon.pdb

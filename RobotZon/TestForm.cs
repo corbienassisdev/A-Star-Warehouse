@@ -76,6 +76,7 @@ namespace RobotZon
 
         public void Log(object content, params object[] args)
         {
+            Console.WriteLine("[{0}] {1}", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), string.Format(content.ToString(), args));
             //listBoxDebug.Items.Add(string.Format("[{0}] {1}\r\n", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), string.Format(content.ToString(), args)));
             //listBoxDebug.SelectedIndex = listBoxDebug.Items.Count - 1;
             //listBoxDebug.SelectedIndex = -1;

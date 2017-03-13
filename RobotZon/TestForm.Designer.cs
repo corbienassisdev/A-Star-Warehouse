@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(1184, 562);
             this.DoubleBuffered = true;
             this.Name = "TestForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TestForm";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.onDraw);
             this.Resize += new System.EventHandler(this.onResize);

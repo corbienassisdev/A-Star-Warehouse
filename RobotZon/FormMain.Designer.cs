@@ -1,6 +1,6 @@
 ﻿namespace RobotZon
 {
-    partial class TestForm
+    partial class FormMain
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -28,17 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.SuspendLayout();
             // 
-            // TestForm
+            // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 562);
             this.DoubleBuffered = true;
-            this.Name = "TestForm";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TestForm";
+            this.Text = "RobotZon";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.onDraw);
             this.Resize += new System.EventHandler(this.onResize);
             this.ResumeLayout(false);

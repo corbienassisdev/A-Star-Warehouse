@@ -1,27 +1,29 @@
-﻿using RobotZon.Salotti;
-using System.Collections.Generic;
-
-namespace RobotZon.Engine
+﻿namespace RobotZon.Engine
 {
     public class Warehouse
     {
         public int[,] Data { get; set; }
-        public List<Robot> Robots { get; set; }
-        public List<Item> Items { get; set; }
+        public Robot[] Robots { get; set; }
+        public Item[] Items { get; set; }
 
-        public Warehouse(int[,] data)
+        public Warehouse(int[,] data, Robot[] robots, Item[] items)
         {
             Data = data;
-            Robots = new List<Robot>();
-            Items = new List<Item>();
+            Robots = robots;
+            Items = items;
         }
 
         public void MoveRobot(int id, int dr, int dc)
         {
-            if (id >= 0 && id < Robots.Count)
+            if (id >= 0 && id < Robots.Length)
             {
                 Robot r = Robots[id];
-                r.Position += new Position(dr, dc);
+
+                Position position = r.Position + new Position(dc, dr);
+                if (r.Position.x + dc >= 0 && r.Position.x + dc < Data.GetLength(1) && r.Position.y + dr >= 0 && r.Position.y + dr < Data.GetLength(0))
+                {
+                    r.Position = position;
+                }
             }
         }
     }

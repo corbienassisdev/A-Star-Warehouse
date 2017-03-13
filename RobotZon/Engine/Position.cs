@@ -17,5 +17,10 @@
         {
             return new Position(p1.x + p2.x, p1.y + p2.y);
         }
+
+        public static Position operator *(Position p, int f)
+        {
+            return new Position(p.x * f, p.y * f);
+        }
     }
 }

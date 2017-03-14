@@ -73,7 +73,7 @@ namespace RobotZon
                 },
                 new Robot[]
                 {
-                    new Robot("Robby", new Position(0, 0))
+                    new Robot("Robby", new Position(6, 6))
                 },
                 new Item[]
                 {
@@ -100,7 +100,20 @@ namespace RobotZon
 
         private void onWork(object sender, EventArgs e)
         {
-            Warehouse.MoveRobot(0, 1, 1);
+            int id = 0;
+            Robot r = Warehouse.Robots[id];
+            if(r != null)
+            {
+                if(r.Path.Count > 0)
+                {
+                    r.Move(new Position(Warehouse.Data.GetLength(1), Warehouse.Data.GetLength(0)));
+                }
+                else
+                {
+                    r.GetPathTo(new Position(4, 3));
+                }
+            }
+
             Refresh();
         }
 

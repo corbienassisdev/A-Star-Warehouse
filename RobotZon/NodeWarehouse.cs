@@ -29,8 +29,6 @@ namespace RobotZon
 
         public override double GetArcCost(Node N2)
         {
-            //todo
-            //return 1 (tous les couts sont égaux)
             return 1;
         }
 
@@ -38,25 +36,44 @@ namespace RobotZon
         {
             //todo
             //on retourne vrai si les coordonnées correspondent à l'objectif
-            return true;
+            return (this.Position.Equals(Warehouse.Objective.Position));
         }
 
         public override List<Node> GetListSucc()
         {
+            List<Node> Succ = new List<Node>();
+
             //3 boucles :
+
+            //recherche de mon e
+            for(int r=0; r<Warehouse.Graph.GetLength(0); r++)
+            {
+                for (int c=0; c< Warehouse.Graph.GetLength(1); c++)
+                {
+                    foreach(Position pos in Neighbours)
+                    {
+                        if (Warehouse.Graph[r, c].Position.Equals(pos))
+                        {
+                            Succ.Add(Warehouse.Graph[r, c]);
+                        }
+                    }
+                    
+                }
+            }
+            
+            return Succ;
             //parcours wrehouse.graph
             //pour chaque : verifie si position est égale à l'une des pos de mon tableau de voisin (juste une)
 
             //todo
             //rendre une liste des noeuds succésseurs
             //tous les noeuds autour de ma position (et libre, pas de mur ou de robot ou en dehors du tableau par ex)
-            return null;
         }
 
         public override void CalculeHCost()
         {
             //todo
-            //rien a faire on retorune tout le temps 1...
+            //rien a faire on retourne tout le temps 1...
         }
     }
 }

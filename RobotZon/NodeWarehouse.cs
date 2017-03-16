@@ -34,18 +34,14 @@ namespace RobotZon
 
         public override bool EndState()
         {
-            //todo
-            //on retourne vrai si les coordonnées correspondent à l'objectif
+            //Objective doit être défini dans Wahrehouse : il correspond au noeud où se trouve l'objet à aller chercher
             return (this.Position.Equals(Warehouse.Objective.Position));
         }
 
         public override List<Node> GetListSucc()
         {
             List<Node> Succ = new List<Node>();
-
-            //3 boucles :
-
-            //recherche de mon e
+            
             for(int r=0; r<Warehouse.Graph.GetLength(0); r++)
             {
                 for (int c=0; c< Warehouse.Graph.GetLength(1); c++)
@@ -57,17 +53,11 @@ namespace RobotZon
                             Succ.Add(Warehouse.Graph[r, c]);
                         }
                     }
-                    
                 }
             }
             
+            //TODO: gérer robots
             return Succ;
-            //parcours wrehouse.graph
-            //pour chaque : verifie si position est égale à l'une des pos de mon tableau de voisin (juste une)
-
-            //todo
-            //rendre une liste des noeuds succésseurs
-            //tous les noeuds autour de ma position (et libre, pas de mur ou de robot ou en dehors du tableau par ex)
         }
 
         public override void CalculeHCost()

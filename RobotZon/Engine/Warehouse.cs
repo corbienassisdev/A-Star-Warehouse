@@ -8,6 +8,7 @@ namespace RobotZon.Engine
         public Item[] Items { get; set; }
 
         public NodeWarehouse[,] Graph { get; set; }
+        public NodeWarehouse Objective;
 
         public Warehouse(int[,] data, Robot[] robots, Item[] items)
         {

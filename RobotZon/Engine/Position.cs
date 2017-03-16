@@ -27,5 +27,11 @@
         {
             return new Position(p.x * f, p.y * f);
         }
+
+        public override bool Equals(System.Object obj)
+        {
+            Position P2 = (Position)obj;
+            return (x == P2.x && y == P2.y);
+        }
     }
 }

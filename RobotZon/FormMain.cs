@@ -110,7 +110,7 @@ namespace RobotZon
                 }
                 else
                 {
-                    r.GetPathTo(new Position(4, 3));
+                    r.GetPathTo(new Position(18, 17));
                 }
             }
 
@@ -147,6 +147,16 @@ namespace RobotZon
                     }
 
                     g.DrawRectangle(new Pen(Color.FromArgb(40, 45, 53)), new Rectangle(c * SizeUnit + SizeUnit + offset.x, r * SizeUnit + SizeUnit + offset.y, SizeUnit, SizeUnit));
+                }
+            }
+
+            //Affichage du graphe
+            foreach (NodeWarehouse node in Warehouse.Graph)
+            {
+                Position a = node.Position;
+                foreach (Position n in node.Neighbours)
+                {
+                    g.DrawLine(new Pen(Color.FromArgb(188, 84, 69), 3), a.x * SizeUnit + (3 * SizeUnit) / 2 + offset.x, a.y * SizeUnit + (3 * SizeUnit) / 2 + offset.y, n.x * SizeUnit + (3 * SizeUnit) / 2 + offset.x, n.y * SizeUnit + (3 * SizeUnit) / 2 + offset.y);
                 }
             }
 

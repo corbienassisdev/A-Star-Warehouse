@@ -23,30 +23,36 @@ namespace RobotZon.Engine
                     List<Position> neighbours = new List<Position>();
 
                     int n = GetData(r, c);
+                    int up = GetData(r + 1, c);
+                    int down = GetData(r - 1, c);
+                    int right = GetData(r, c + 1);
+                    int left = GetData(r, c - 1);
                     switch (n)
                     {
                         case 0:
-                            if (GetData(r + 1, c) == -1 || GetData(r + 1, c) == 0)
+                            if (up == -1 || up == 0 || up == 1)
                             {
-                                neighbours.Add(new Position(r + 1, c));
+                                neighbours.Add(new Position(c, r + 1));
                             }
 
-                            if (GetData(r - 1, c) == 0)
+                            if (down == -1 || down == 0 || up == 1)
                             {
-                                neighbours.Add(new Position(r - 1, c));
+                                neighbours.Add(new Position(c, r - 1));
                             }
 
-                            if (GetData(r, c + 1) == 0)
+                            if (right == 0 || up == 1)
                             {
-                                neighbours.Add(new Position(r, c + 1));
+                                neighbours.Add(new Position(c + 1, r));
                             }
 
-                            if (GetData(r, c - 1) == 0)
+                            if (left == 0 || up == 1)
                             {
-                                neighbours.Add(new Position(r, c - 1));
+                                neighbours.Add(new Position(c - 1, r));
                             }
                             break;
                     }
+
+                    Graph[r, c] = new NodeWarehouse("NodeWarehouse " + "(" + c + ", " + r + ")", this, new Position(c, r), neighbours); 
                     int a = 2;
                 }
             }
